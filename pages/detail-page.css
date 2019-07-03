@@ -33,13 +33,58 @@ h1 {
 }
 
 form {
+    margin: 2rem auto;
     width: 50%;
-}
-
-button {
-    background-color: palevioletred;
-    color: white;
+    min-width: 15rem;
+    padding: 1rem;
+    border: 1px solid palevioletred;
+  }
+  
+  .formSection {
+    margin-top: 1rem;
+    margin-bottom: 2rem
+  }
+  
+  label {
+    display: inline-block;
+    width: 80%;
+  }
+  
+  input, textarea {
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid palevioletred;
+    min-height: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: palevioletred;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 5rem;
+  }
+  
+  button {
     border: solid 1px transparent;
-    border-radius: 5px;
     padding: 0.5rem 1rem;
-}
+    color: #ffffff;
+    background-color: palevioletred;
+  }
+  
+  button:hover,
+  button:focus {
+    color: palevioletred;
+    border-color: palevioletred;
+    background-color: white;
+  }
+  .comment {
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 50%;
+    min-width: 15rem;
+    background-color: lavenderblush;
+    color: palevioletred;
+  }
