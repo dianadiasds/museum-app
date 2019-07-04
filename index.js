@@ -336,7 +336,7 @@ function displayPainting(painting){
   myimg.setAttribute('alt', painting.title)
 
   const mylink = document.createElement('a')
-  mylink.setAttribute('href', "./pages/detail-page.html")
+  mylink.setAttribute('href', './pages/detail-page.html')
   mylink.appendChild(myimg)
  
   const imgSection = document.getElementById('images') 
