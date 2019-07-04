@@ -322,25 +322,28 @@ const data = {
         productionPlaces: [ ]
       }
     ]
+}
+const paintings = data.artObjects
+
+function displayPainting(painting){
+
+  const lastFour = painting.longTitle.substr(painting.longTitle.length - 5)
+  if(painting.webImage.width < 2000 || painting.principalOrFirstMaker === 'Gerard van Honthost' || lastFour > 1800){
+    return null
   }
-
-  const paintings = data.artObjects
-
-  
-
-  for(let i = 0; i < paintings.length; i++){
-  const myalt = paintings[i].title
-  const mysrc = paintings[i].webImage.url
-
-
   const myimg =  document.createElement('img')
-  myimg.setAttribute('src', mysrc)
-  myimg.setAttribute('alt', myalt)
-  
+  myimg.setAttribute('src', painting.webImage.url)
+  myimg.setAttribute('alt', painting.title)
+
   const mylink = document.createElement('a')
   mylink.setAttribute('href', "./pages/detail-page.html")
   mylink.appendChild(myimg)
  
   const imgSection = document.getElementById('images') 
   imgSection.appendChild(mylink)
-  }
+ } 
+
+for(let i = 0; i < paintings.length; i++){
+  const currentPainting = paintings[i]
+  displayPainting(currentPainting)
+}
